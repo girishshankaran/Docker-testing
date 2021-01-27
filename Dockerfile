@@ -1,8 +1,5 @@
-FROM centos
-RUN yum install httpd -y
-COPY index.html /var/www/html/
-CMD systemctl start httpd
-CMD sudo firewall-cmd --permanent --add-service=http
-CMD sudo firewall-cmd --reload
-# CMD sudo systemctl start httpd
-
+FROM rhel7/rhel
+RUN yum install httpd22 -y
+CMD systemctl enable httpd22.service
+CMD systemctl start httpd22.service
+ENTRYPOINT echo "Welcome to ID"
