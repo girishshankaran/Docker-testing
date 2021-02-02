@@ -1,0 +1,13 @@
+FROM centos
+# ENV DEBIAN_FRONTEND noninteractive
+# ENV DEBCONF_NONINTERACTIVE_SEEN true
+
+ADD index.html /var/www/html
+RUN yum update -y
+RUN yum install httpd -y
+CMD firewall-cmd --permanent --add-service=http
+CMD firewall-cmd --reload
+
+ENTRYPOINT systemctl start httpd
+# ENTRYPOINT httpdapachectl -D FOREGROUND
+
