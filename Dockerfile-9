@@ -1,0 +1,4 @@
+FROM centos
+ADD https://github.com/IBM/ibm-spectrum-scale-install-infra.git /tmp
+CMD ["echo", "Welcome to ID"]
+ENTRYPOINT echo "Hello World"
