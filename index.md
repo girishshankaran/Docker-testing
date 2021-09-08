@@ -1,5 +1,5 @@
-# Introdution
-## What's New?
+# *Introdution*
+## *What's New?*
 # What's a Docker?
 ## How do you create a container?
 ## What's a container registry?
